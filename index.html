@@ -6,11 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Game</title>
     <style>
+        body{
+            background-image: url(./png/bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
         #game{
-            width: 500px;
+            position: relative;
+            width: 100vw;
             height: 500px;
-            background-color: black;
-            cursor: url(./png/cursor2.png) 50 50, auto;
+            cursor: url(./png/123.png) 50 50, auto;
             overflow: hidden;
             position: relative;
         }
@@ -18,13 +23,21 @@
             height: 150px;
             position: absolute;
         }
+        input, p{
+            position: relative;
+            top: 50px;
+            left: 45%;
+        }
+        p{
+            width: 300px;
+        }
     </style>
 </head>
 <body>
     <div id="game"></div>
     <input type="button" value="開始遊戲" id="start">
     <p> 分數：<span id="score">0</span>分</p>
-    <p> 剩餘：<span id="sec">10</span>秒</p>
+    <p> 剩餘：<span id="sec">10</span>秒</p>    
     <script src="jquery-3.4.1.min.js"></script>
     <script>
         $(function(){
